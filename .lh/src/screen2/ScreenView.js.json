@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/screen2/ScreenView.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1642415995458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642416026294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react'\r\n-import{View, StyleSheet} from 'react-native'\r\n+import{View, StyleSheet, Text} from 'react-native'\r\n const ScreenView = () => {\r\n     return(\r\n-        <View>\r\n-\r\n+        <View style={styles.view}>\r\n+          <Text>aaa</Text>\r\n         </View>\r\n     )\r\n }\r\n const styles=StyleSheet.create({\r\n"
+                },
+                {
+                    "date": 1642419772598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,20 @@\n import React from 'react'\r\n import{View, StyleSheet, Text} from 'react-native'\r\n+import PagerView from 'react-native-pager-view'\r\n const ScreenView = () => {\r\n     return(\r\n-        <View style={styles.view}>\r\n-          <Text>aaa</Text>\r\n-        </View>\r\n+        <PagerView style={styles.view}>\r\n+          <View key=\"1\">\r\n+             <Screen1/> \r\n+          </View>\r\n+          <View key=\"2\">\r\n+              <Screen2/>\r\n+          </View>\r\n+          <View key=\"3\">\r\n+              <Screen3/>\r\n+          </View>\r\n+        </PagerView>\r\n     )\r\n }\r\n const styles=StyleSheet.create({\r\n     view:{flex: 1, backgroundColor: 'red'}\r\n"
+                },
+                {
+                    "date": 1642419804121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react'\r\n import{View, StyleSheet, Text} from 'react-native'\r\n import PagerView from 'react-native-pager-view'\r\n+import Screen1 from './Screen1'\r\n const ScreenView = () => {\r\n     return(\r\n         <PagerView style={styles.view}>\r\n           <View key=\"1\">\r\n"
+                },
+                {
+                    "date": 1642420084933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react'\r\n import{View, StyleSheet, Text} from 'react-native'\r\n import PagerView from 'react-native-pager-view'\r\n import Screen1 from './Screen1'\r\n+\r\n const ScreenView = () => {\r\n     return(\r\n         <PagerView style={styles.view}>\r\n           <View key=\"1\">\r\n"
+                },
+                {
+                    "date": 1642420113629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react'\r\n import{View, StyleSheet, Text} from 'react-native'\r\n import PagerView from 'react-native-pager-view'\r\n import Screen1 from './Screen1'\r\n-\r\n+import Screen2 from './Screen2'\r\n+import Screen3 from './Screen3'\r\n const ScreenView = () => {\r\n     return(\r\n         <PagerView style={styles.view}>\r\n           <View key=\"1\">\r\n"
+                },
+                {
+                    "date": 1642420218175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Screen2 from './Screen2'\r\n import Screen3 from './Screen3'\r\n const ScreenView = () => {\r\n     return(\r\n-        <PagerView style={styles.view}>\r\n+        <PagerView >\r\n           <View key=\"1\">\r\n              <Screen1/> \r\n           </View>\r\n           <View key=\"2\">\r\n@@ -18,8 +18,8 @@\n           </View>\r\n         </PagerView>\r\n     )\r\n }\r\n-const styles=StyleSheet.create({\r\n-    view:{flex: 1, backgroundColor: 'red'}\r\n-})\r\n+// const styles=StyleSheet.create({\r\n+//     view:{flex: 1, backgroundColor: 'red'}\r\n+// })\r\n export default ScreenView\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642420277896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Screen2 from './Screen2'\r\n import Screen3 from './Screen3'\r\n const ScreenView = () => {\r\n     return(\r\n-        <PagerView >\r\n+        <PagerView style={styles.container}>\r\n           <View key=\"1\">\r\n              <Screen1/> \r\n           </View>\r\n           <View key=\"2\">\r\n@@ -18,8 +18,8 @@\n           </View>\r\n         </PagerView>\r\n     )\r\n }\r\n-// const styles=StyleSheet.create({\r\n-//     view:{flex: 1, backgroundColor: 'red'}\r\n-// })\r\n+const styles=StyleSheet.create({\r\n+    container:{flex: 1}\r\n+})\r\n export default ScreenView\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642429082426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,19 +3,25 @@\n import PagerView from 'react-native-pager-view'\r\n import Screen1 from './Screen1'\r\n import Screen2 from './Screen2'\r\n import Screen3 from './Screen3'\r\n-const ScreenView = () => {\r\n+\r\n+\r\n+\r\n+const ScreenView = ({navigation}) => {\r\n+    const onPressScreen1=()=>{\r\n+        \r\n+    }\r\n     return(\r\n-        <PagerView style={styles.container}>\r\n+        <PagerView style={styles.container}ref={ref}  initialPage={0} showPageIndicator={true}>\r\n           <View key=\"1\">\r\n-             <Screen1/> \r\n+             <Screen1 onPress={onPressScreen1}/> \r\n           </View>\r\n           <View key=\"2\">\r\n-              <Screen2/>\r\n+              <Screen2 onPress={onPressScreen2}/>\r\n           </View>\r\n           <View key=\"3\">\r\n-              <Screen3/>\r\n+              <Screen3 onPress={onPressScreen3}/>\r\n           </View>\r\n         </PagerView>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1642429323878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,31 +1,37 @@\n-import React from 'react'\r\n-import{View, StyleSheet, Text} from 'react-native'\r\n+import React, { useRef } from 'react'\r\n+import { View, StyleSheet, Text } from 'react-native'\r\n import PagerView from 'react-native-pager-view'\r\n import Screen1 from './Screen1'\r\n import Screen2 from './Screen2'\r\n import Screen3 from './Screen3'\r\n \r\n \r\n-\r\n-const ScreenView = ({navigation}) => {\r\n-    const onPressScreen1=()=>{\r\n-        \r\n+const ref = useRef(null)\r\n+const ScreenView = ({ navigation }) => {\r\n+    const onPressScreen1 = () => {\r\n+        ref.current ?. setPage(1)\r\n     }\r\n-    return(\r\n-        <PagerView style={styles.container}ref={ref}  initialPage={0} showPageIndicator={true}>\r\n-          <View key=\"1\">\r\n-             <Screen1 onPress={onPressScreen1}/> \r\n-          </View>\r\n-          <View key=\"2\">\r\n-              <Screen2 onPress={onPressScreen2}/>\r\n-          </View>\r\n-          <View key=\"3\">\r\n-              <Screen3 onPress={onPressScreen3}/>\r\n-          </View>\r\n+    const onPressScreen2=()=>{\r\n+        ref.current?.setPage(2)\r\n+    }\r\n+    const onPressScreen3=()=>{\r\n+        navigation.navigate('Login')\r\n+    }\r\n+    return (\r\n+        <PagerView style={styles.container} ref={ref} initialPage={0} showPageIndicator={true}>\r\n+            <View key=\"1\">\r\n+                <Screen1 onPress={onPressScreen1} />\r\n+            </View>\r\n+            <View key=\"2\">\r\n+                <Screen2 onPress={onPressScreen2} />\r\n+            </View>\r\n+            <View key=\"3\">\r\n+                <Screen3 onPress={onPressScreen3} />\r\n+            </View>\r\n         </PagerView>\r\n     )\r\n }\r\n-const styles=StyleSheet.create({\r\n-    container:{flex: 1}\r\n+const styles = StyleSheet.create({\r\n+    container: { flex: 1 }\r\n })\r\n export default ScreenView\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642429336425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,11 @@\n import Screen2 from './Screen2'\r\n import Screen3 from './Screen3'\r\n \r\n \r\n-const ref = useRef(null)\r\n+\r\n const ScreenView = ({ navigation }) => {\r\n+    const ref = useRef(null)\r\n     const onPressScreen1 = () => {\r\n         ref.current ?. setPage(1)\r\n     }\r\n     const onPressScreen2=()=>{\r\n"
+                }
+            ],
+            "date": 1642415995458,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport{View, StyleSheet} from 'react-native'\r\nconst ScreenView = () => {\r\n    return(\r\n        <View>\r\n\r\n        </View>\r\n    )\r\n}\r\nconst styles=StyleSheet.create({\r\n    view:{flex: 1, backgroundColor: 'red'}\r\n})\r\nexport default ScreenView"
+        }
+    ]
+}

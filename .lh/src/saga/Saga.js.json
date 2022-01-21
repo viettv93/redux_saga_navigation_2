@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/saga/Saga.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1642416480930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642416500213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n function* Action() {\r\n     try {\r\n-        yield put('Action', payload)\r\n+        yield put('Action', value)\r\n     } catch (e) { console.log('ACTION ERROR: ' + e) }\r\n }\r\n function* mySaga(){\r\n     yield takeLatest('Action', Action)\r\n"
+                }
+            ],
+            "date": 1642416480930,
+            "name": "Commit-0",
+            "content": "import { put, takeLatest } from 'redux-saga/effects'\r\n\r\n\r\nfunction* Action() {\r\n    try {\r\n        yield put('Action', payload)\r\n    } catch (e) { console.log('ACTION ERROR: ' + e) }\r\n}\r\nfunction* mySaga(){\r\n    yield takeLatest('Action', Action)\r\n}\r\nexport default mySaga"
+        }
+    ]
+}

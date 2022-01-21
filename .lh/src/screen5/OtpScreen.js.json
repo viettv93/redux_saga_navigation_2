@@ -1,0 +1,130 @@
+{
+    "sourceFile": "src/screen5/OtpScreen.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1642416358422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642606806119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import React from \"react\"\r\n import { Text, View, StyleSheet } from \"react-native\"\r\n \r\n const OtpScreen = () => {\r\n    return(\r\n"
+                },
+                {
+                    "date": 1642606901145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,19 @@\n import React from \"react\"\r\n import { Text, View, StyleSheet } from \"react-native\"\r\n-\r\n+import fonts from '../utils'\r\n const OtpScreen = () => {\r\n-   return(\r\n-       <View>\r\n-           <Text>irhuiehf</Text>\r\n-       </View>\r\n-   ) \r\n+    return (\r\n+        <View style={styles.container}>\r\n+            <Text>irhuiehf</Text>\r\n+        </View>\r\n+    )\r\n }\r\n-const styles =StyleSheet.create({\r\n-    view: {flex: 1, backgroundColor: 'yellow'}\r\n+const styles = StyleSheet.create({\r\n+    container: {\r\n+        flex: 1,\r\n+        backgroundColor: fonts.green,\r\n+        alignItems: 'center',\r\n+        justifyContent: 'center'\r\n+    }\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642607130922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n import fonts from '../utils'\r\n const OtpScreen = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n-            <Text>irhuiehf</Text>\r\n+            <Text style={styles.txtPhone}>Phone Verification</Text>\r\n+            <Text style={styles.txtTitle}></Text>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -13,7 +14,12 @@\n         flex: 1,\r\n         backgroundColor: fonts.green,\r\n         alignItems: 'center',\r\n         justifyContent: 'center'\r\n+    },\r\n+    txtPhone: {\r\n+        fontFamily: fonts.fontMontserratBig,\r\n+        fontSize: fonts.fontBig,\r\n+        color: fonts.white\r\n     }\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642607183393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,12 @@\n     txtPhone: {\r\n         fontFamily: fonts.fontMontserratBig,\r\n         fontSize: fonts.fontBig,\r\n         color: fonts.white\r\n+    },\r\n+    txtTitle:{\r\n+        fontFamily: fonts.fontMontserrat,\r\n+        fontSize: fonts.fontSmall,\r\n+        color: fonts.white\r\n     }\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642607194507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const OtpScreen = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtPhone}>Phone Verification</Text>\r\n-            <Text style={styles.txtTitle}></Text>\r\n+            <Text style={styles.txtTitle}>Enter your OTP code here</Text>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n"
+                },
+                {
+                    "date": 1642607605578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from \"react\"\r\n import { Text, View, StyleSheet } from \"react-native\"\r\n+import { RFValue } from \"react-native-responsive-fontsize\"\r\n import fonts from '../utils'\r\n const OtpScreen = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n@@ -23,8 +24,9 @@\n     },\r\n     txtTitle:{\r\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontSmall,\r\n-        color: fonts.white\r\n+        color: fonts.white, \r\n+        marginVertical: RFValue(30)\r\n     }\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642608089414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,18 @@\n import React from \"react\"\r\n import { Text, View, StyleSheet } from \"react-native\"\r\n import { RFValue } from \"react-native-responsive-fontsize\"\r\n import fonts from '../utils'\r\n+import OTPInputView from \"@twotalltotems/react-native-otp-input\"\r\n const OtpScreen = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtPhone}>Phone Verification</Text>\r\n             <Text style={styles.txtTitle}>Enter your OTP code here</Text>\r\n+            <OTPInputView style={styles.otpView}\r\n+            pinCount={6}\r\n+            >\r\n+            </OTPInputView>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -26,7 +31,11 @@\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontSmall,\r\n         color: fonts.white, \r\n         marginVertical: RFValue(30)\r\n+    },\r\n+    otpView:{\r\n+        width: '80%',\r\n+        height: RFValue(100)\r\n     }\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642608298254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,13 @@\n         <View style={styles.container}>\r\n             <Text style={styles.txtPhone}>Phone Verification</Text>\r\n             <Text style={styles.txtTitle}>Enter your OTP code here</Text>\r\n             <OTPInputView style={styles.otpView}\r\n-            pinCount={6}\r\n+                pinCount={6}\r\n+                autoFocusOnLoad\r\n+                keyboardAppearance=\"light\"\r\n+                codeInputFieldStyle={styles.underlineStyleBase}\r\n+                codeInputHighlightStyle={styles.underlineStyleHighLighted}\r\n             >\r\n             </OTPInputView>\r\n         </View>\r\n     )\r\n@@ -26,16 +30,38 @@\n         fontFamily: fonts.fontMontserratBig,\r\n         fontSize: fonts.fontBig,\r\n         color: fonts.white\r\n     },\r\n-    txtTitle:{\r\n+    txtTitle: {\r\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontSmall,\r\n-        color: fonts.white, \r\n+        color: fonts.white,\r\n         marginVertical: RFValue(30)\r\n     },\r\n-    otpView:{\r\n+    otpView: {\r\n         width: '80%',\r\n         height: RFValue(100)\r\n-    }\r\n+    },borderStyleBase: {\r\n+        width: RFValue(45),\r\n+        height: RFValue(45),\r\n+        fontSize: fonts.fontBig,\r\n+        fontFamily: fonts.fontMontserratBig\r\n+      },\r\n+     \r\n+      borderStyleHighLighted: {\r\n+        borderColor: fonts.lightGreen,\r\n+      },\r\n+     \r\n+      underlineStyleBase: {\r\n+        width: RFValue(45),\r\n+        height:  RFValue(45),\r\n+        borderWidth: 0,\r\n+        borderBottomWidth: 1,\r\n+        fontSize: fonts.fontBig,\r\n+        fontFamily:fontMontserratBig\r\n+      },\r\n+     \r\n+      underlineStyleHighLighted: {\r\n+        borderColor: fonts.lightGreen,\r\n+      },\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642608312575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         height:  RFValue(45),\r\n         borderWidth: 0,\r\n         borderBottomWidth: 1,\r\n         fontSize: fonts.fontBig,\r\n-        fontFamily:fontMontserratBig\r\n+        fontFamily:fonts.fontMontserratBig\r\n       },\r\n      \r\n       underlineStyleHighLighted: {\r\n         borderColor: fonts.lightGreen,\r\n"
+                },
+                {
+                    "date": 1642608359530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,11 @@\n                 autoFocusOnLoad\r\n                 keyboardAppearance=\"light\"\r\n                 codeInputFieldStyle={styles.underlineStyleBase}\r\n                 codeInputHighlightStyle={styles.underlineStyleHighLighted}\r\n+                onCodeFilled={(code => {\r\n+                    console.log(`Code is ${code}, you are good to go!`)\r\n+                })}\r\n             >\r\n             </OTPInputView>\r\n         </View>\r\n     )\r\n"
+                },
+                {
+                    "date": 1642609259457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,11 @@\n                 codeInputHighlightStyle={styles.underlineStyleHighLighted}\r\n                 onCodeFilled={(code => {\r\n                     console.log(`Code is ${code}, you are good to go!`)\r\n                 })}\r\n-            >\r\n-            </OTPInputView>\r\n+            />\r\n+            <Text style={styles.txtQuestion}></Text>\r\n+            <Text style={styles.txtQuestion}></Text>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -42,29 +43,35 @@\n     },\r\n     otpView: {\r\n         width: '80%',\r\n         height: RFValue(100)\r\n-    },borderStyleBase: {\r\n+    },\r\n+    borderStyleBase: {\r\n         width: RFValue(45),\r\n         height: RFValue(45),\r\n         fontSize: fonts.fontBig,\r\n         fontFamily: fonts.fontMontserratBig\r\n-      },\r\n-     \r\n-      borderStyleHighLighted: {\r\n+    },\r\n+\r\n+    borderStyleHighLighted: {\r\n         borderColor: fonts.lightGreen,\r\n-      },\r\n-     \r\n-      underlineStyleBase: {\r\n+    },\r\n+\r\n+    underlineStyleBase: {\r\n         width: RFValue(45),\r\n-        height:  RFValue(45),\r\n+        height: RFValue(45),\r\n         borderWidth: 0,\r\n         borderBottomWidth: 1,\r\n         fontSize: fonts.fontBig,\r\n-        fontFamily:fonts.fontMontserratBig\r\n-      },\r\n-     \r\n-      underlineStyleHighLighted: {\r\n+        fontFamily: fonts.fontMontserratBig\r\n+    },\r\n+\r\n+    underlineStyleHighLighted: {\r\n         borderColor: fonts.lightGreen,\r\n-      },\r\n+    },\r\n+    txtQuestion: {\r\n+        color: fonts.white,\r\n+        fontFamily: fonts.fontMontserrat,\r\n+        fontSize: fonts.fontMontserrat\r\n+    }\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642609504824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from \"react\"\r\n-import { Text, View, StyleSheet } from \"react-native\"\r\n+import { Text, View, StyleSheet, TouchableOpacity } from \"react-native\"\r\n import { RFValue } from \"react-native-responsive-fontsize\"\r\n import fonts from '../utils'\r\n import OTPInputView from \"@twotalltotems/react-native-otp-input\"\r\n const OtpScreen = () => {\r\n@@ -17,10 +17,13 @@\n                 onCodeFilled={(code => {\r\n                     console.log(`Code is ${code}, you are good to go!`)\r\n                 })}\r\n             />\r\n-            <Text style={styles.txtQuestion}></Text>\r\n-            <Text style={styles.txtQuestion}></Text>\r\n+            <Text style={styles.txtQuestion}>Didn’t you received any code? </Text>\r\n+            <Text style={styles.txtQuestion}>Resent new code</Text>\r\n+            <TouchableOpacity style={styles.btnNextScreen}>\r\n+                <Text style={styles.txtButton}>Verify</Text>\r\n+            </TouchableOpacity>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -71,7 +74,19 @@\n     txtQuestion: {\r\n         color: fonts.white,\r\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontMontserrat\r\n+    },\r\n+    btnNextScreen: {\r\n+        borderRadius: 20,\r\n+        backgroundColor: fonts.white,\r\n+        alignItems: 'center',\r\n+        justifyContent: 'center',\r\n+        marginTop: RFValue(30)\r\n+    },\r\n+    txtButton:{\r\n+        color: fonts.lightGreen,\r\n+        fontSize: fonts.fontSmall,\r\n+        fontFamily: fonts.fontMontserratBold\r\n     }\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642609697133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,18 +7,21 @@\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtPhone}>Phone Verification</Text>\r\n             <Text style={styles.txtTitle}>Enter your OTP code here</Text>\r\n-            <OTPInputView style={styles.otpView}\r\n-                pinCount={6}\r\n-                autoFocusOnLoad\r\n-                keyboardAppearance=\"light\"\r\n-                codeInputFieldStyle={styles.underlineStyleBase}\r\n-                codeInputHighlightStyle={styles.underlineStyleHighLighted}\r\n-                onCodeFilled={(code => {\r\n-                    console.log(`Code is ${code}, you are good to go!`)\r\n-                })}\r\n-            />\r\n+            <View>\r\n+                <OTPInputView style={styles.otpView}\r\n+                    pinCount={6}\r\n+                    autoFocusOnLoad\r\n+                    keyboardAppearance=\"light\"\r\n+                    codeInputFieldStyle={styles.underlineStyleBase}\r\n+                    codeInputHighlightStyle={styles.underlineStyleHighLighted}\r\n+                    onCodeFilled={(code => {\r\n+                        console.log(`Code is ${code}, you are good to go!`)\r\n+                    })}\r\n+                />\r\n+            </View>\r\n+\r\n             <Text style={styles.txtQuestion}>Didn’t you received any code? </Text>\r\n             <Text style={styles.txtQuestion}>Resent new code</Text>\r\n             <TouchableOpacity style={styles.btnNextScreen}>\r\n                 <Text style={styles.txtButton}>Verify</Text>\r\n@@ -82,9 +85,9 @@\n         alignItems: 'center',\r\n         justifyContent: 'center',\r\n         marginTop: RFValue(30)\r\n     },\r\n-    txtButton:{\r\n+    txtButton: {\r\n         color: fonts.lightGreen,\r\n         fontSize: fonts.fontSmall,\r\n         fontFamily: fonts.fontMontserratBold\r\n     }\r\n"
+                },
+                {
+                    "date": 1642610133093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtPhone}>Phone Verification</Text>\r\n             <Text style={styles.txtTitle}>Enter your OTP code here</Text>\r\n-            <View>\r\n+            {/* <View>\r\n                 <OTPInputView style={styles.otpView}\r\n                     pinCount={6}\r\n                     autoFocusOnLoad\r\n                     keyboardAppearance=\"light\"\r\n@@ -18,9 +18,9 @@\n                     onCodeFilled={(code => {\r\n                         console.log(`Code is ${code}, you are good to go!`)\r\n                     })}\r\n                 />\r\n-            </View>\r\n+            </View> */}\r\n \r\n             <Text style={styles.txtQuestion}>Didn’t you received any code? </Text>\r\n             <Text style={styles.txtQuestion}>Resent new code</Text>\r\n             <TouchableOpacity style={styles.btnNextScreen}>\r\n"
+                },
+                {
+                    "date": 1642610238635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n     },\r\n     txtQuestion: {\r\n         color: fonts.white,\r\n         fontFamily: fonts.fontMontserrat,\r\n-        fontSize: fonts.fontMontserrat\r\n+        fontSize: fonts.fontBig\r\n     },\r\n     btnNextScreen: {\r\n         borderRadius: 20,\r\n         backgroundColor: fonts.white,\r\n"
+                },
+                {
+                    "date": 1642610285097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,10 @@\n         borderRadius: 20,\r\n         backgroundColor: fonts.white,\r\n         alignItems: 'center',\r\n         justifyContent: 'center',\r\n-        marginTop: RFValue(30)\r\n+        marginTop: RFValue(30),\r\n+        width: '90%'\r\n     },\r\n     txtButton: {\r\n         color: fonts.lightGreen,\r\n         fontSize: fonts.fontSmall,\r\n"
+                },
+                {
+                    "date": 1642610292651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,8 +89,9 @@\n     },\r\n     txtButton: {\r\n         color: fonts.lightGreen,\r\n         fontSize: fonts.fontSmall,\r\n-        fontFamily: fonts.fontMontserratBold\r\n+        fontFamily: fonts.fontMontserratBold,\r\n+        padding: 10\r\n     }\r\n })\r\n export default OtpScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642610306972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtPhone}>Phone Verification</Text>\r\n             <Text style={styles.txtTitle}>Enter your OTP code here</Text>\r\n-            {/* <View>\r\n+            <View>\r\n                 <OTPInputView style={styles.otpView}\r\n                     pinCount={6}\r\n                     autoFocusOnLoad\r\n                     keyboardAppearance=\"light\"\r\n@@ -18,9 +18,9 @@\n                     onCodeFilled={(code => {\r\n                         console.log(`Code is ${code}, you are good to go!`)\r\n                     })}\r\n                 />\r\n-            </View> */}\r\n+            </View>\r\n \r\n             <Text style={styles.txtQuestion}>Didn’t you received any code? </Text>\r\n             <Text style={styles.txtQuestion}>Resent new code</Text>\r\n             <TouchableOpacity style={styles.btnNextScreen}>\r\n"
+                },
+                {
+                    "date": 1642611123427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n     },\r\n     txtQuestion: {\r\n         color: fonts.white,\r\n         fontFamily: fonts.fontMontserrat,\r\n-        fontSize: fonts.fontBig\r\n+        fontSize: fonts.fontLarge\r\n     },\r\n     btnNextScreen: {\r\n         borderRadius: 20,\r\n         backgroundColor: fonts.white,\r\n"
+                },
+                {
+                    "date": 1642611138459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n     },\r\n     txtQuestion: {\r\n         color: fonts.white,\r\n         fontFamily: fonts.fontMontserrat,\r\n-        fontSize: fonts.fontLarge\r\n+        fontSize: fonts.fontMedium\r\n     },\r\n     btnNextScreen: {\r\n         borderRadius: 20,\r\n         backgroundColor: fonts.white,\r\n"
+                },
+                {
+                    "date": 1642611176122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         alignItems: 'center',\r\n         justifyContent: 'center'\r\n     },\r\n     txtPhone: {\r\n-        fontFamily: fonts.fontMontserratBig,\r\n+        fontFamily: fonts.fontMontserratBold,\r\n         fontSize: fonts.fontBig,\r\n         color: fonts.white\r\n     },\r\n     txtTitle: {\r\n"
+                },
+                {
+                    "date": 1642611229676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,10 @@\n         marginVertical: RFValue(30)\r\n     },\r\n     otpView: {\r\n         width: '80%',\r\n-        height: RFValue(100)\r\n+        height: RFValue(100),\r\n+         marginVertical: RFValue(75)\r\n     },\r\n     borderStyleBase: {\r\n         width: RFValue(45),\r\n         height: RFValue(45),\r\n"
+                },
+                {
+                    "date": 1642611244412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     },\r\n     otpView: {\r\n         width: '80%',\r\n         height: RFValue(100),\r\n-         marginVertical: RFValue(75)\r\n+         marginVertical: RFValue(55)\r\n     },\r\n     borderStyleBase: {\r\n         width: RFValue(45),\r\n         height: RFValue(45),\r\n"
+                },
+                {
+                    "date": 1642611260511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,8 @@\n         marginVertical: RFValue(30)\r\n     },\r\n     otpView: {\r\n         width: '80%',\r\n-        height: RFValue(100),\r\n          marginVertical: RFValue(55)\r\n     },\r\n     borderStyleBase: {\r\n         width: RFValue(45),\r\n"
+                },
+                {
+                    "date": 1642611280543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n         marginVertical: RFValue(30)\r\n     },\r\n     otpView: {\r\n         width: '80%',\r\n+        height: '10%',\r\n          marginVertical: RFValue(55)\r\n     },\r\n     borderStyleBase: {\r\n         width: RFValue(45),\r\n"
+                },
+                {
+                    "date": 1642611289328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n         marginVertical: RFValue(30)\r\n     },\r\n     otpView: {\r\n         width: '80%',\r\n-        height: '10%',\r\n+        height: '7%',\r\n          marginVertical: RFValue(55)\r\n     },\r\n     borderStyleBase: {\r\n         width: RFValue(45),\r\n"
+                },
+                {
+                    "date": 1642611296052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n         marginVertical: RFValue(30)\r\n     },\r\n     otpView: {\r\n         width: '80%',\r\n-        height: '7%',\r\n+        height: '10%',\r\n          marginVertical: RFValue(55)\r\n     },\r\n     borderStyleBase: {\r\n         width: RFValue(45),\r\n"
+                },
+                {
+                    "date": 1642611303708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     },\r\n     otpView: {\r\n         width: '80%',\r\n         height: '10%',\r\n-         marginVertical: RFValue(55)\r\n+         marginVertical: RFValue(45)\r\n     },\r\n     borderStyleBase: {\r\n         width: RFValue(45),\r\n         height: RFValue(45),\r\n"
+                }
+            ],
+            "date": 1642416358422,
+            "name": "Commit-0",
+            "content": "import { Text, View, StyleSheet } from \"react-native\"\r\n\r\nconst OtpScreen = () => {\r\n   return(\r\n       <View>\r\n           <Text>irhuiehf</Text>\r\n       </View>\r\n   ) \r\n}\r\nconst styles =StyleSheet.create({\r\n    view: {flex: 1, backgroundColor: 'yellow'}\r\n})\r\nexport default OtpScreen"
+        }
+    ]
+}

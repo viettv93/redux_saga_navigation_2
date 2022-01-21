@@ -1,0 +1,170 @@
+{
+    "sourceFile": "src/screen3/Login.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 38,
+            "patches": [
+                {
+                    "date": 1642416164793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642429769142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         </View>\r\n     )\r\n }\r\n const styles= StyleSheet.create({\r\n-    view:{flex: 1, backgroundColor: 'green'}\r\n+    view:{flex: 1, backgroundColor: '#33907C'}\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642429965827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,24 @@\n import React from \"react\"\r\n import { View, StyleSheet, Text } from \"react-native\"\r\n \r\n const Login = () => {\r\n-    return(\r\n-        <View  style={styles.view}>\r\n-         <Text>jfbjebfb</Text>\r\n+    return (\r\n+        <View style={styles.view}>\r\n+            <Text style={styles.textStyle}>Welcome to tradly</Text>\r\n         </View>\r\n     )\r\n }\r\n-const styles= StyleSheet.create({\r\n-    view:{flex: 1, backgroundColor: '#33907C'}\r\n+const styles = StyleSheet.create({\r\n+    container: {\r\n+        flex: 1,\r\n+        backgroundColor: '#33907C',\r\n+        alignItems: 'center',\r\n+        justifyContent: 'center'\r\n+    },\r\n+    textStyle: {\r\n+        fontFamily: 'Montserrat-ExtraBold',\r\n+        fontSize: 24,\r\n+        color: 'white'\r\n+    }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642429984791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { View, StyleSheet, Text } from \"react-native\"\r\n \r\n const Login = () => {\r\n     return (\r\n-        <View style={styles.view}>\r\n+        <View style={styles.container}>\r\n             <Text style={styles.textStyle}>Welcome to tradly</Text>\r\n         </View>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1642430121340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n const Login = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.textStyle}>Welcome to tradly</Text>\r\n+            <Text style={styles.text2Style}></Text>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -18,7 +19,12 @@\n     textStyle: {\r\n         fontFamily: 'Montserrat-ExtraBold',\r\n         fontSize: 24,\r\n         color: 'white'\r\n+    },\r\n+    text2Style: {\r\n+        fontFamily: 'Welcome to tradly',\r\n+        fontSize: 16, \r\n+        color: 'white'\r\n     }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642430155541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         fontSize: 24,\r\n         color: 'white'\r\n     },\r\n     text2Style: {\r\n-        fontFamily: 'Welcome to tradly',\r\n+        fontFamily: 'Montserrat-Regular',\r\n         fontSize: 16, \r\n         color: 'white'\r\n     }\r\n })\r\n"
+                },
+                {
+                    "date": 1642430168381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const Login = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.textStyle}>Welcome to tradly</Text>\r\n-            <Text style={styles.text2Style}></Text>\r\n+            <Text style={styles.text2Style}>Login to your account</Text>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n"
+                },
+                {
+                    "date": 1642430388497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,15 @@\n import React from \"react\"\r\n-import { View, StyleSheet, Text } from \"react-native\"\r\n+import { View, StyleSheet, Text, TextInput } from \"react-native\"\r\n \r\n const Login = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.textStyle}>Welcome to tradly</Text>\r\n             <Text style={styles.text2Style}>Login to your account</Text>\r\n+            <TextInput style={styles.textInput1Style}\r\n+            placeholder=\"Email/Mobile Number\"\r\n+            placeholderTextColor={'white'}/>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -24,7 +27,13 @@\n     text2Style: {\r\n         fontFamily: 'Montserrat-Regular',\r\n         fontSize: 16, \r\n         color: 'white'\r\n-    }\r\n+    },\r\n+     textInput1Style:{\r\n+         borderRadius: 20,\r\n+         borderColor: 'white',\r\n+         borderWidth: 1,\r\n+         width: '90%'\r\n+     }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642430406160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,9 @@\n      textInput1Style:{\r\n          borderRadius: 20,\r\n          borderColor: 'white',\r\n          borderWidth: 1,\r\n-         width: '90%'\r\n+         width: '90%',\r\n+         fontSize:18\r\n      }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642430422830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n          borderRadius: 20,\r\n          borderColor: 'white',\r\n          borderWidth: 1,\r\n          width: '90%',\r\n-         fontSize:18\r\n+         fontSize:18,\r\n+          fontFamily:'Montserrat-Regular'\r\n      }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642430441428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,9 @@\n          borderColor: 'white',\r\n          borderWidth: 1,\r\n          width: '90%',\r\n          fontSize:18,\r\n-          fontFamily:'Montserrat-Regular'\r\n+          fontFamily:'Montserrat-Regular',\r\n+          marginVertical: 20\r\n      }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642430508450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,11 @@\n             <Text style={styles.text2Style}>Login to your account</Text>\r\n             <TextInput style={styles.textInput1Style}\r\n             placeholder=\"Email/Mobile Number\"\r\n             placeholderTextColor={'white'}/>\r\n+            <TextInput style={styles.textInput1Style}\r\n+            placeholder=\"Password\"\r\n+            placeholderTextColor={'white'}/>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n"
+                },
+                {
+                    "date": 1642430529315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,12 @@\n         <View style={styles.container}>\r\n             <Text style={styles.textStyle}>Welcome to tradly</Text>\r\n             <Text style={styles.text2Style}>Login to your account</Text>\r\n             <TextInput style={styles.textInput1Style}\r\n-            placeholder=\"Email/Mobile Number\"\r\n+            placeholder=\" Email/Mobile Number\"\r\n             placeholderTextColor={'white'}/>\r\n             <TextInput style={styles.textInput1Style}\r\n-            placeholder=\"Password\"\r\n+            placeholder=\" Password\"\r\n             placeholderTextColor={'white'}/>\r\n         </View>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1642430546377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,8 @@\n          borderWidth: 1,\r\n          width: '90%',\r\n          fontSize:18,\r\n           fontFamily:'Montserrat-Regular',\r\n-          marginVertical: 20\r\n+          marginTop: 20\r\n      }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642430804066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,21 @@\n import React from \"react\"\r\n-import { View, StyleSheet, Text, TextInput } from \"react-native\"\r\n+import { View, StyleSheet, Text, TextInput, TouchableOpacity } from \"react-native\"\r\n \r\n const Login = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.textStyle}>Welcome to tradly</Text>\r\n             <Text style={styles.text2Style}>Login to your account</Text>\r\n             <TextInput style={styles.textInput1Style}\r\n-            placeholder=\" Email/Mobile Number\"\r\n-            placeholderTextColor={'white'}/>\r\n+                placeholder=\" Email/Mobile Number\"\r\n+                placeholderTextColor={'white'} />\r\n             <TextInput style={styles.textInput1Style}\r\n-            placeholder=\" Password\"\r\n-            placeholderTextColor={'white'}/>\r\n+                placeholder=\" Password\"\r\n+                placeholderTextColor={'white'} />\r\n+            <TouchableOpacity style={styles.touchableOpacity}>\r\n+              <Text style={styles.textTouch}></Text>\r\n+            </TouchableOpacity>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -28,18 +31,30 @@\n         color: 'white'\r\n     },\r\n     text2Style: {\r\n         fontFamily: 'Montserrat-Regular',\r\n-        fontSize: 16, \r\n+        fontSize: 16,\r\n         color: 'white'\r\n     },\r\n-     textInput1Style:{\r\n-         borderRadius: 20,\r\n-         borderColor: 'white',\r\n-         borderWidth: 1,\r\n-         width: '90%',\r\n-         fontSize:18,\r\n-          fontFamily:'Montserrat-Regular',\r\n-          marginTop: 20\r\n-     }\r\n+    textInput1Style: {\r\n+        borderRadius: 20,\r\n+        borderColor: 'white',\r\n+        borderWidth: 1,\r\n+        width: '90%',\r\n+        fontSize: 18,\r\n+        fontFamily: 'Montserrat-Regular',\r\n+        marginTop: 20\r\n+    },\r\n+    touchableOpacity:{\r\n+        borderRadius: 20,\r\n+        backgroundColor: 'white',\r\n+        alignItems: 'center',\r\n+        justifyContent: 'center',\r\n+        width: '90%'\r\n+    },\r\n+    textTouch: {\r\n+        color: '#13B58C',\r\n+        fontFamily: 'Montserrat-Bold',\r\n+        fontSize: 16\r\n+    }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642430986502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from \"react\"\r\n import { View, StyleSheet, Text, TextInput, TouchableOpacity } from \"react-native\"\r\n+import fonts from '../utils'\r\n \r\n const Login = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n@@ -52,9 +53,9 @@\n         width: '90%'\r\n     },\r\n     textTouch: {\r\n         color: '#13B58C',\r\n-        fontFamily: 'Montserrat-Bold',\r\n+        fontFamily: fonts.fontMontserrat,\r\n         fontSize: 16\r\n     }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642431098839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,8 +54,8 @@\n     },\r\n     textTouch: {\r\n         color: '#13B58C',\r\n         fontFamily: fonts.fontMontserrat,\r\n-        fontSize: 16\r\n+        fontSize: fonts.fontSmall\r\n     }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642431161694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <TextInput style={styles.textInput1Style}\r\n                 placeholder=\" Password\"\r\n                 placeholderTextColor={'white'} />\r\n             <TouchableOpacity style={styles.touchableOpacity}>\r\n-              <Text style={styles.textTouch}></Text>\r\n+              <Text style={styles.textTouch}>Lgon</Text>\r\n             </TouchableOpacity>\r\n         </View>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1642431210163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,16 +13,17 @@\n             <TextInput style={styles.textInput1Style}\r\n                 placeholder=\" Password\"\r\n                 placeholderTextColor={'white'} />\r\n             <TouchableOpacity style={styles.touchableOpacity}>\r\n-              <Text style={styles.textTouch}>Lgon</Text>\r\n+              <Text style={styles.textTouch}>Login</Text>\r\n             </TouchableOpacity>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n     container: {\r\n         flex: 1,\r\n+        paddingHorizontal: 20,\r\n         backgroundColor: '#33907C',\r\n         alignItems: 'center',\r\n         justifyContent: 'center'\r\n     },\r\n"
+                },
+                {
+                    "date": 1642431218088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n }\r\n const styles = StyleSheet.create({\r\n     container: {\r\n         flex: 1,\r\n-        paddingHorizontal: 20,\r\n+        paddingVertical: 10,\r\n         backgroundColor: '#33907C',\r\n         alignItems: 'center',\r\n         justifyContent: 'center'\r\n     },\r\n"
+                },
+                {
+                    "date": 1642431247157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,8 @@\n }\r\n const styles = StyleSheet.create({\r\n     container: {\r\n         flex: 1,\r\n-        paddingVertical: 10,\r\n         backgroundColor: '#33907C',\r\n         alignItems: 'center',\r\n         justifyContent: 'center'\r\n     },\r\n@@ -47,8 +46,9 @@\n         marginTop: 20\r\n     },\r\n     touchableOpacity:{\r\n         borderRadius: 20,\r\n+        paddingVertical: 10,\r\n         backgroundColor: 'white',\r\n         alignItems: 'center',\r\n         justifyContent: 'center',\r\n         width: '90%'\r\n"
+                },
+                {
+                    "date": 1642431357784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n         justifyContent: 'center',\r\n         width: '90%'\r\n     },\r\n     textTouch: {\r\n-        color: '#13B58C',\r\n+        color: fonts.lightGreen,\r\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontSmall\r\n     }\r\n })\r\n"
+                },
+                {
+                    "date": 1642431373967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <TextInput style={styles.textInput1Style}\r\n                 placeholder=\" Password\"\r\n                 placeholderTextColor={'white'} />\r\n             <TouchableOpacity style={styles.touchableOpacity}>\r\n-              <Text style={styles.textTouch}>Login</Text>\r\n+                <Text style={styles.textTouch}>Login</Text>\r\n             </TouchableOpacity>\r\n         </View>\r\n     )\r\n }\r\n@@ -44,9 +44,9 @@\n         fontSize: 18,\r\n         fontFamily: 'Montserrat-Regular',\r\n         marginTop: 20\r\n     },\r\n-    touchableOpacity:{\r\n+    touchableOpacity: {\r\n         borderRadius: 20,\r\n         paddingVertical: 10,\r\n         backgroundColor: 'white',\r\n         alignItems: 'center',\r\n"
+                },
+                {
+                    "date": 1642431421124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const Login = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n-            <Text style={styles.textStyle}>Welcome to tradly</Text>\r\n+            <Text style={styles.txtWellCome}>Welcome to tradly</Text>\r\n             <Text style={styles.text2Style}>Login to your account</Text>\r\n             <TextInput style={styles.textInput1Style}\r\n                 placeholder=\" Email/Mobile Number\"\r\n                 placeholderTextColor={'white'} />\r\n@@ -25,9 +25,9 @@\n         backgroundColor: '#33907C',\r\n         alignItems: 'center',\r\n         justifyContent: 'center'\r\n     },\r\n-    textStyle: {\r\n+    txtWellCome: {\r\n         fontFamily: 'Montserrat-ExtraBold',\r\n         fontSize: 24,\r\n         color: 'white'\r\n     },\r\n"
+                },
+                {
+                    "date": 1642431439039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const Login = () => {\r\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtWellCome}>Welcome to tradly</Text>\r\n-            <Text style={styles.text2Style}>Login to your account</Text>\r\n+            <Text style={styles.txtTitle}>Login to your account</Text>\r\n             <TextInput style={styles.textInput1Style}\r\n                 placeholder=\" Email/Mobile Number\"\r\n                 placeholderTextColor={'white'} />\r\n             <TextInput style={styles.textInput1Style}\r\n@@ -30,9 +30,9 @@\n         fontFamily: 'Montserrat-ExtraBold',\r\n         fontSize: 24,\r\n         color: 'white'\r\n     },\r\n-    text2Style: {\r\n+    txtTitle: {\r\n         fontFamily: 'Montserrat-Regular',\r\n         fontSize: 16,\r\n         color: 'white'\r\n     },\r\n"
+                },
+                {
+                    "date": 1642431460192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtWellCome}>Welcome to tradly</Text>\r\n             <Text style={styles.txtTitle}>Login to your account</Text>\r\n-            <TextInput style={styles.textInput1Style}\r\n+            <TextInput style={styles.inputAccount}\r\n                 placeholder=\" Email/Mobile Number\"\r\n                 placeholderTextColor={'white'} />\r\n             <TextInput style={styles.textInput1Style}\r\n                 placeholder=\" Password\"\r\n@@ -35,9 +35,9 @@\n         fontFamily: 'Montserrat-Regular',\r\n         fontSize: 16,\r\n         color: 'white'\r\n     },\r\n-    textInput1Style: {\r\n+    inputAccount: {\r\n         borderRadius: 20,\r\n         borderColor: 'white',\r\n         borderWidth: 1,\r\n         width: '90%',\r\n"
+                },
+                {
+                    "date": 1642431482912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,12 @@\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtWellCome}>Welcome to tradly</Text>\r\n             <Text style={styles.txtTitle}>Login to your account</Text>\r\n-            <TextInput style={styles.inputAccount}\r\n+            <TextInput style={styles.inputUser}\r\n                 placeholder=\" Email/Mobile Number\"\r\n                 placeholderTextColor={'white'} />\r\n-            <TextInput style={styles.textInput1Style}\r\n+            <TextInput style={styles.inputUser}\r\n                 placeholder=\" Password\"\r\n                 placeholderTextColor={'white'} />\r\n             <TouchableOpacity style={styles.touchableOpacity}>\r\n                 <Text style={styles.textTouch}>Login</Text>\r\n@@ -35,9 +35,9 @@\n         fontFamily: 'Montserrat-Regular',\r\n         fontSize: 16,\r\n         color: 'white'\r\n     },\r\n-    inputAccount: {\r\n+    inputUser: {\r\n         borderRadius: 20,\r\n         borderColor: 'white',\r\n         borderWidth: 1,\r\n         width: '90%',\r\n"
+                },
+                {
+                    "date": 1642431501443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n                 placeholderTextColor={'white'} />\r\n             <TextInput style={styles.inputUser}\r\n                 placeholder=\" Password\"\r\n                 placeholderTextColor={'white'} />\r\n-            <TouchableOpacity style={styles.touchableOpacity}>\r\n+            <TouchableOpacity style={styles.btnLogin}>\r\n                 <Text style={styles.textTouch}>Login</Text>\r\n             </TouchableOpacity>\r\n         </View>\r\n     )\r\n@@ -44,9 +44,9 @@\n         fontSize: 18,\r\n         fontFamily: 'Montserrat-Regular',\r\n         marginTop: 20\r\n     },\r\n-    touchableOpacity: {\r\n+    btnLogin: {\r\n         borderRadius: 20,\r\n         paddingVertical: 10,\r\n         backgroundColor: 'white',\r\n         alignItems: 'center',\r\n"
+                },
+                {
+                    "date": 1642431511329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <TextInput style={styles.inputUser}\r\n                 placeholder=\" Password\"\r\n                 placeholderTextColor={'white'} />\r\n             <TouchableOpacity style={styles.btnLogin}>\r\n-                <Text style={styles.textTouch}>Login</Text>\r\n+                <Text style={styles.txtLogin}>Login</Text>\r\n             </TouchableOpacity>\r\n         </View>\r\n     )\r\n }\r\n@@ -52,9 +52,9 @@\n         alignItems: 'center',\r\n         justifyContent: 'center',\r\n         width: '90%'\r\n     },\r\n-    textTouch: {\r\n+    txtLogin: {\r\n         color: fonts.lightGreen,\r\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontSmall\r\n     }\r\n"
+                },
+                {
+                    "date": 1642521665560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from \"react\"\r\n import { View, StyleSheet, Text, TextInput, TouchableOpacity } from \"react-native\"\r\n+import { RFValue } from \"react-native-responsive-fontsize\"\r\n import fonts from '../utils'\r\n \r\n const Login = () => {\r\n     return (\r\n@@ -21,38 +22,39 @@\n }\r\n const styles = StyleSheet.create({\r\n     container: {\r\n         flex: 1,\r\n-        backgroundColor: '#33907C',\r\n+        backgroundColor: fonts.green,\r\n         alignItems: 'center',\r\n         justifyContent: 'center'\r\n     },\r\n     txtWellCome: {\r\n-        fontFamily: 'Montserrat-ExtraBold',\r\n-        fontSize: 24,\r\n-        color: 'white'\r\n+        fontFamily: fonts.fontMontserratBold,\r\n+        fontSize: fonts.fontLarge,\r\n+        color: fonts.white\r\n     },\r\n     txtTitle: {\r\n-        fontFamily: 'Montserrat-Regular',\r\n-        fontSize: 16,\r\n-        color: 'white'\r\n+        fontFamily: fonts.fontMontserrat,\r\n+        fontSize: fonts.fontSmall,\r\n+        color: fonts.white\r\n     },\r\n     inputUser: {\r\n         borderRadius: 20,\r\n-        borderColor: 'white',\r\n+        borderColor: fonts.white,\r\n         borderWidth: 1,\r\n         width: '90%',\r\n-        fontSize: 18,\r\n-        fontFamily: 'Montserrat-Regular',\r\n-        marginTop: 20\r\n+        fontSize: fonts.fontMedium,\r\n+        fontFamily: fonts.fontMontserrat,\r\n+        marginTop: RFValue(20)\r\n     },\r\n     btnLogin: {\r\n         borderRadius: 20,\r\n-        paddingVertical: 10,\r\n-        backgroundColor: 'white',\r\n+        paddingVertical: RFValue(10),\r\n+        backgroundColor: fonts.white,\r\n         alignItems: 'center',\r\n         justifyContent: 'center',\r\n-        width: '90%'\r\n+        width: '90%',\r\n+        marginTop: RFValue(30)\r\n     },\r\n     txtLogin: {\r\n         color: fonts.lightGreen,\r\n         fontFamily: fonts.fontMontserrat,\r\n"
+                },
+                {
+                    "date": 1642524017908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n                 placeholderTextColor={'white'} />\r\n             <TouchableOpacity style={styles.btnLogin}>\r\n                 <Text style={styles.txtLogin}>Login</Text>\r\n             </TouchableOpacity>\r\n+            <Text style={styles.txtForgot}>Forgot your password ?</Text>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -58,7 +59,12 @@\n     txtLogin: {\r\n         color: fonts.lightGreen,\r\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontSmall\r\n+    },\r\n+    txtForgot: {\r\n+        fontFamily: fonts.fontMontserrat,\r\n+        color: fonts.white,\r\n+        fontSize: fonts.fontMedium\r\n     }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642524040118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,8 +63,9 @@\n     },\r\n     txtForgot: {\r\n         fontFamily: fonts.fontMontserrat,\r\n         color: fonts.white,\r\n-        fontSize: fonts.fontMedium\r\n+        fontSize: fonts.fontMedium,\r\n+        marginVertical: RFValue(30)\r\n     }\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642524068651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,10 @@\n     },\r\n     txtWellCome: {\r\n         fontFamily: fonts.fontMontserratBold,\r\n         fontSize: fonts.fontLarge,\r\n-        color: fonts.white\r\n+        color: fonts.white,\r\n+        marginVertical: RFValue(30)\r\n     },\r\n     txtTitle: {\r\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontSmall,\r\n"
+                },
+                {
+                    "date": 1642524099300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n         marginTop: RFValue(20)\r\n     },\r\n     btnLogin: {\r\n         borderRadius: 20,\r\n-        paddingVertical: RFValue(10),\r\n+        paddingVertical: RFValue(15),\r\n         backgroundColor: fonts.white,\r\n         alignItems: 'center',\r\n         justifyContent: 'center',\r\n         width: '90%',\r\n"
+                },
+                {
+                    "date": 1642524464215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,12 @@\n             <TouchableOpacity style={styles.btnLogin}>\r\n                 <Text style={styles.txtLogin}>Login</Text>\r\n             </TouchableOpacity>\r\n             <Text style={styles.txtForgot}>Forgot your password ?</Text>\r\n+            <View style={styles.txtParentView}>\r\n+                <Text style={styles.txtHave}></Text>\r\n+                <Text style={styles.txtSignIn}></Text>\r\n+            </View>\r\n         </View>\r\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n@@ -66,7 +70,22 @@\n         fontFamily: fonts.fontMontserrat,\r\n         color: fonts.white,\r\n         fontSize: fonts.fontMedium,\r\n         marginVertical: RFValue(30)\r\n+    },\r\n+    txtParentView: {\r\n+        flexDirection: 'row',\r\n+         alignItems: 'center'\r\n+    },\r\n+    txtHave: {\r\n+        fontFamily: fonts.fontMontserrat,\r\n+        fontSize: fonts.fontMedium,\r\n+        color: fonts.white\r\n+    },\r\n+    txtSignIn: {\r\n+        fontFamily: fonts.fontMontserratBig,\r\n+        fontSize: fonts.fontMedium,\r\n+        color: fonts.white\r\n     }\r\n+\r\n })\r\n export default Login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642524493453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n                 <Text style={styles.txtLogin}>Login</Text>\r\n             </TouchableOpacity>\r\n             <Text style={styles.txtForgot}>Forgot your password ?</Text>\r\n             <View style={styles.txtParentView}>\r\n-                <Text style={styles.txtHave}></Text>\r\n-                <Text style={styles.txtSignIn}></Text>\r\n+                <Text style={styles.txtHave}>Don’t have an account ? </Text>\r\n+                <Text style={styles.txtSignIn}> Sign up</Text>\r\n             </View>\r\n         </View>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1642524509759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             </TouchableOpacity>\r\n             <Text style={styles.txtForgot}>Forgot your password ?</Text>\r\n             <View style={styles.txtParentView}>\r\n                 <Text style={styles.txtHave}>Don’t have an account ? </Text>\r\n-                <Text style={styles.txtSignIn}> Sign up</Text>\r\n+                <Text style={styles.txtSignIn}>Sign up</Text>\r\n             </View>\r\n         </View>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1642524641953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,12 @@\n import { View, StyleSheet, Text, TextInput, TouchableOpacity } from \"react-native\"\r\n import { RFValue } from \"react-native-responsive-fontsize\"\r\n import fonts from '../utils'\r\n \r\n-const Login = () => {\r\n+const Login = ({navigation}) => {\r\n+    const onPress=()=>{\r\n+        navigation.navigate('Create')\r\n+    }\r\n     return (\r\n         <View style={styles.container}>\r\n             <Text style={styles.txtWellCome}>Welcome to tradly</Text>\r\n             <Text style={styles.txtTitle}>Login to your account</Text>\r\n@@ -19,9 +22,11 @@\n             </TouchableOpacity>\r\n             <Text style={styles.txtForgot}>Forgot your password ?</Text>\r\n             <View style={styles.txtParentView}>\r\n                 <Text style={styles.txtHave}>Don’t have an account ? </Text>\r\n-                <Text style={styles.txtSignIn}>Sign up</Text>\r\n+                <Text \r\n+                onPress={()=>onPress()}\r\n+                style={styles.txtSignIn}>Sign up</Text>\r\n             </View>\r\n         </View>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1642601821093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n                 <Text style={styles.txtLogin}>Login</Text>\r\n             </TouchableOpacity>\r\n             <Text style={styles.txtForgot}>Forgot your password ?</Text>\r\n             <View style={styles.txtParentView}>\r\n-                <Text style={styles.txtHave}>Don’t have an account ? </Text>\r\n+                <Text style={styles.txtDontHave}>Don’t have an account ? </Text>\r\n                 <Text \r\n                 onPress={()=>onPress()}\r\n                 style={styles.txtSignIn}>Sign up</Text>\r\n             </View>\r\n@@ -80,9 +80,9 @@\n     txtParentView: {\r\n         flexDirection: 'row',\r\n          alignItems: 'center'\r\n     },\r\n-    txtHave: {\r\n+    txtDontHave: {\r\n         fontFamily: fonts.fontMontserrat,\r\n         fontSize: fonts.fontMedium,\r\n         color: fonts.white\r\n     },\r\n"
+                }
+            ],
+            "date": 1642416164793,
+            "name": "Commit-0",
+            "content": "import React from \"react\"\r\nimport { View, StyleSheet, Text } from \"react-native\"\r\n\r\nconst Login = () => {\r\n    return(\r\n        <View  style={styles.view}>\r\n         <Text>jfbjebfb</Text>\r\n        </View>\r\n    )\r\n}\r\nconst styles= StyleSheet.create({\r\n    view:{flex: 1, backgroundColor: 'green'}\r\n})\r\nexport default Login"
+        }
+    ]
+}

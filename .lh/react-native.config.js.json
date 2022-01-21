@@ -1,0 +1,22 @@
+{
+    "sourceFile": "react-native.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1642349126379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642349175163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n-assets: ['./src/assets/fonts']\n\\ No newline at end of file\n+\r\n+module.exports={\r\n+    assets: ['./src/assets/fonts']\r\n+}\r\n"
+                }
+            ],
+            "date": 1642349126379,
+            "name": "Commit-0",
+            "content": "assets: ['./src/assets/fonts']"
+        }
+    ]
+}

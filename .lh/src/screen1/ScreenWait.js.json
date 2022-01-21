@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/screen1/ScreenWait.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1642415839669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642417495092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\"\r\n import { View, StyleSheet } from \"react-native\"\r\n-import { create } from \"react-test-renderer\"\r\n \r\n+\r\n const ScreenWait = () => {\r\n     return(\r\n         <View style={styles.view}>\r\n          \r\n"
+                },
+                {
+                    "date": 1642417885819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,17 @@\n import React from \"react\"\r\n-import { View, StyleSheet } from \"react-native\"\r\n+import { View, StyleSheet, Image, Text } from \"react-native\"\r\n \r\n \r\n const ScreenWait = () => {\r\n     return(\r\n         <View style={styles.view}>\r\n-         \r\n+         <Image source={require('../image/commit.png')}\r\n+            resizeMode=\"contain\"/>\r\n+         <Text style={{styles.text}}>Tradly</Text>\r\n         </View>\r\n     )\r\n }\r\n const styles=StyleSheet.create({\r\n- view: {flex: 1, backgroundColor: '#33907C'}\r\n-})\r\n+ view: {flex: 1, backgroundColor: '#33907C', alignItems: 'center',justifyContent: 'center' }, \r\n+text:{fontFamily:'Montserrat-Italic-VariableFont_wght', fontSize: 30,color: 'white'}})\r\n export default ScreenWait\r\n"
+                },
+                {
+                    "date": 1642417905221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,17 @@\n import { View, StyleSheet, Image, Text } from \"react-native\"\r\n \r\n \r\n const ScreenWait = () => {\r\n-    return(\r\n+    return (\r\n         <View style={styles.view}>\r\n-         <Image source={require('../image/commit.png')}\r\n-            resizeMode=\"contain\"/>\r\n-         <Text style={{styles.text}}>Tradly</Text>\r\n+            <Image source={require('../image/commit.png')}\r\n+                resizeMode=\"contain\" />\r\n+            <Text style={styles.text}>Tradly</Text>\r\n         </View>\r\n     )\r\n }\r\n-const styles=StyleSheet.create({\r\n- view: {flex: 1, backgroundColor: '#33907C', alignItems: 'center',justifyContent: 'center' }, \r\n-text:{fontFamily:'Montserrat-Italic-VariableFont_wght', fontSize: 30,color: 'white'}})\r\n+const styles = StyleSheet.create({\r\n+    view: { flex: 1, backgroundColor: '#33907C', alignItems: 'center', justifyContent: 'center' },\r\n+    text: { fontFamily: 'Montserrat-Italic-VariableFont_wght', fontSize: 30, color: 'white' }\r\n+})\r\n export default ScreenWait\r\n"
+                },
+                {
+                    "date": 1642417935612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n     view: { flex: 1, backgroundColor: '#33907C', alignItems: 'center', justifyContent: 'center' },\r\n-    text: { fontFamily: 'Montserrat-Italic-VariableFont_wght', fontSize: 30, color: 'white' }\r\n+    text: { fontFamily: 'Montserrat-VariableFont_wght', fontSize: 30, color: 'white' }\r\n })\r\n export default ScreenWait\r\n"
+                },
+                {
+                    "date": 1642417969771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n     view: { flex: 1, backgroundColor: '#33907C', alignItems: 'center', justifyContent: 'center' },\r\n-    text: { fontFamily: 'Montserrat-VariableFont_wght', fontSize: 30, color: 'white' }\r\n+    text: { fontFamily: 'Montserrat-VariableFont_wght', fontSize: 30, color: 'white', fontWeight: '500' }\r\n })\r\n export default ScreenWait\r\n"
+                },
+                {
+                    "date": 1642418209980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n     )\r\n }\r\n const styles = StyleSheet.create({\r\n     view: { flex: 1, backgroundColor: '#33907C', alignItems: 'center', justifyContent: 'center' },\r\n-    text: { fontFamily: 'Montserrat-VariableFont_wght', fontSize: 30, color: 'white', fontWeight: '500' }\r\n+    text: { fontFamily: 'Montserrat-Bold', fontSize: 30, color: 'white', fontWeight: '500' }\r\n })\r\n export default ScreenWait\r\n"
+                },
+                {
+                    "date": 1642418433748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n import React from \"react\"\r\n import { View, StyleSheet, Image, Text } from \"react-native\"\r\n \r\n \r\n-const ScreenWait = () => {\r\n+const ScreenWait = ({navigation}) => {\r\n+    setTimeout(nextPage,3000)\r\n+    const nextPage=()=>{\r\n+        navigation.navigate('PageView')\r\n+    }\r\n     return (\r\n         <View style={styles.view}>\r\n             <Image source={require('../image/commit.png')}\r\n                 resizeMode=\"contain\" />\r\n"
+                },
+                {
+                    "date": 1642418557831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const ScreenWait = ({navigation}) => {\r\n     setTimeout(nextPage,3000)\r\n     const nextPage=()=>{\r\n-        navigation.navigate('PageView')\r\n+        navigation.navigate('PagerView')\r\n     }\r\n     return (\r\n         <View style={styles.view}>\r\n             <Image source={require('../image/commit.png')}\r\n"
+                },
+                {
+                    "date": 1642418752503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import React from \"react\"\r\n import { View, StyleSheet, Image, Text } from \"react-native\"\r\n \r\n \r\n-const ScreenWait = ({navigation}) => {\r\n-    setTimeout(nextPage,3000)\r\n-    const nextPage=()=>{\r\n+const ScreenWait = ({ navigation }) => {\r\n+    setTimeout(nextPage, 3000)\r\n+    const nextPage = () => {\r\n         navigation.navigate('PagerView')\r\n     }\r\n     return (\r\n         <View style={styles.view}>\r\n"
+                },
+                {
+                    "date": 1642418818352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,13 @@\n import { View, StyleSheet, Image, Text } from \"react-native\"\r\n \r\n \r\n const ScreenWait = ({ navigation }) => {\r\n-    setTimeout(nextPage, 3000)\r\n-    const nextPage = () => {\r\n-        navigation.navigate('PagerView')\r\n-    }\r\n+    navigation.navigate('PagerView')\r\n+    // setTimeout(nextPage, 3000)\r\n+    // const nextPage = () => {\r\n+        \r\n+    // }\r\n     return (\r\n         <View style={styles.view}>\r\n             <Image source={require('../image/commit.png')}\r\n                 resizeMode=\"contain\" />\r\n"
+                },
+                {
+                    "date": 1642418841456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n import { View, StyleSheet, Image, Text } from \"react-native\"\r\n \r\n \r\n const ScreenWait = ({ navigation }) => {\r\n-    navigation.navigate('PagerView')\r\n-    // setTimeout(nextPage, 3000)\r\n-    // const nextPage = () => {\r\n-        \r\n-    // }\r\n+    \r\n+    setTimeout(nextPage, 3000)\r\n+    const nextPage = () => {\r\n+        navigation.navigate('PagerView') \r\n+    }\r\n     return (\r\n         <View style={styles.view}>\r\n             <Image source={require('../image/commit.png')}\r\n                 resizeMode=\"contain\" />\r\n"
+                },
+                {
+                    "date": 1642418983007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n import { View, StyleSheet, Image, Text } from \"react-native\"\r\n \r\n \r\n const ScreenWait = ({ navigation }) => {\r\n-    \r\n-    setTimeout(nextPage, 3000)\r\n     const nextPage = () => {\r\n         navigation.navigate('PagerView') \r\n     }\r\n+    setTimeout(nextPage, 3000)\r\n+    \r\n     return (\r\n         <View style={styles.view}>\r\n             <Image source={require('../image/commit.png')}\r\n                 resizeMode=\"contain\" />\r\n"
+                }
+            ],
+            "date": 1642415839669,
+            "name": "Commit-0",
+            "content": "import React from \"react\"\r\nimport { View, StyleSheet } from \"react-native\"\r\nimport { create } from \"react-test-renderer\"\r\n\r\nconst ScreenWait = () => {\r\n    return(\r\n        <View style={styles.view}>\r\n         \r\n        </View>\r\n    )\r\n}\r\nconst styles=StyleSheet.create({\r\n view: {flex: 1, backgroundColor: '#33907C'}\r\n})\r\nexport default ScreenWait\r\n"
+        }
+    ]
+}

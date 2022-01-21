@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/Main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1642417161590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642417352229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,26 +10,34 @@\n import Login from './screen3/Login'\r\n \r\n const Stack = createNativeStackNavigator()\r\n function Screen() {\r\n- return(\r\n-     <NavigationContainer>\r\n-         <Stack.Navigator>\r\n-             <Stack.Screen name='Start'\r\n-             component={ScreenWait}\r\n-             options={{headerShown: false}}/>\r\n-             <Stack.Screen name='Start'\r\n-             component={ScreenView}\r\n-             options={{headerShown: false}}/>\r\n-             <Stack.Screen name='Start'\r\n-             component={Login}\r\n-             options={{headerShown: false}}/>\r\n-             <Stack.Screen name='Start'\r\n-             component={CreateScreen}\r\n-             options={{headerShown: false}}/>\r\n-             <Stack.Screen name='Start'\r\n-             component={OtpScreen}\r\n-             options={{headerShown: false}}/>\r\n-         </Stack.Navigator>\r\n-     </NavigationContainer>\r\n- )\r\n+    return (\r\n+        <NavigationContainer>\r\n+            <Stack.Navigator>\r\n+                <Stack.Screen name='Start'\r\n+                    component={ScreenWait}\r\n+                    options={{ headerShown: false }} />\r\n+                <Stack.Screen name='PagerView'\r\n+                    component={ScreenView}\r\n+                    options={{ headerShown: false }} />\r\n+                <Stack.Screen name='Login'\r\n+                    component={Login}\r\n+                    options={{ headerShown: false }} />\r\n+                <Stack.Screen name='Create'\r\n+                    component={CreateScreen}\r\n+                    options={{ headerShown: false }} />\r\n+                <Stack.Screen name='Otp'\r\n+                    component={OtpScreen}\r\n+                    options={{ headerShown: false }} />\r\n+            </Stack.Navigator>\r\n+        </NavigationContainer>\r\n+    )\r\n }\r\n+const Main = () => {\r\n+    return (\r\n+        <Provider store={Store}>\r\n+            <Screen />\r\n+        </Provider>\r\n+    )\r\n+}\r\n+export default Main\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642602800672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import ScreenWait from './screen1/ScreenWait'\r\n import CreateScreen from './screen4/CreateScreen';\r\n import OtpScreen from './screen5/OtpScreen';\r\n import Login from './screen3/Login'\r\n+import GetNumber from './screen6/GetNumber';\r\n \r\n const Stack = createNativeStackNavigator()\r\n function Screen() {\r\n     return (\r\n@@ -25,8 +26,11 @@\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name='Create'\r\n                     component={CreateScreen}\r\n                     options={{ headerShown: false }} />\r\n+                     <Stack.Screen name='GetNumber'\r\n+                    component={GetNumber}\r\n+                    options={{ headerShown: false }} />\r\n                 <Stack.Screen name='Otp'\r\n                     component={OtpScreen}\r\n                     options={{ headerShown: false }} />\r\n             </Stack.Navigator>\r\n"
+                }
+            ],
+            "date": 1642417161590,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport { NavigationContainer } from '@react-navigation/native';\r\nimport { createNativeStackNavigator } from '@react-navigation/native-stack';\r\nimport { Provider } from 'react-redux';\r\nimport Store from './store/Store'\r\nimport ScreenView from './screen2/ScreenView';\r\nimport ScreenWait from './screen1/ScreenWait'\r\nimport CreateScreen from './screen4/CreateScreen';\r\nimport OtpScreen from './screen5/OtpScreen';\r\nimport Login from './screen3/Login'\r\n\r\nconst Stack = createNativeStackNavigator()\r\nfunction Screen() {\r\n return(\r\n     <NavigationContainer>\r\n         <Stack.Navigator>\r\n             <Stack.Screen name='Start'\r\n             component={ScreenWait}\r\n             options={{headerShown: false}}/>\r\n             <Stack.Screen name='Start'\r\n             component={ScreenView}\r\n             options={{headerShown: false}}/>\r\n             <Stack.Screen name='Start'\r\n             component={Login}\r\n             options={{headerShown: false}}/>\r\n             <Stack.Screen name='Start'\r\n             component={CreateScreen}\r\n             options={{headerShown: false}}/>\r\n             <Stack.Screen name='Start'\r\n             component={OtpScreen}\r\n             options={{headerShown: false}}/>\r\n         </Stack.Navigator>\r\n     </NavigationContainer>\r\n )\r\n}\r\n"
+        }
+    ]
+}

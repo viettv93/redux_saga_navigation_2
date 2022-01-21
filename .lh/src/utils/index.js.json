@@ -1,0 +1,90 @@
+{
+    "sourceFile": "src/utils/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1642430891961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642430943343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,1 @@\n-const fontMontserrat = 'Montserrat-Bold'\r\n-\r\n-\r\n-export default {\r\n-    fontMontserrat\r\n-}\n\\ No newline at end of file\n+export const fontMontserrat = 'Montserrat-Bold'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642430969551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,6 @@\n-export const fontMontserrat = 'Montserrat-Bold'\n\\ No newline at end of file\n+const fontMontserrat = 'Montserrat-Bold'\r\n+\r\n+\r\n+export default fonts = {\r\n+    fontMontserrat\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642431075207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n+import { RFPercentage, RFValue } from \"react-native-responsive-fontsize\";\r\n+\r\n const fontMontserrat = 'Montserrat-Bold'\r\n+const fontSmall = RFPercentage(4)\r\n \r\n-\r\n export default fonts = {\r\n     fontMontserrat\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642431186742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { RFPercentage, RFValue } from \"react-native-responsive-fontsize\";\r\n \r\n const fontMontserrat = 'Montserrat-Bold'\r\n-const fontSmall = RFPercentage(4)\r\n+const fontSmall = RFPercentage(2)\r\n \r\n export default fonts = {\r\n-    fontMontserrat\r\n+    fontMontserrat,\r\n+    fontSmall\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642431193111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { RFPercentage, RFValue } from \"react-native-responsive-fontsize\";\r\n \r\n const fontMontserrat = 'Montserrat-Bold'\r\n-const fontSmall = RFPercentage(2)\r\n+const fontSmall = RFPercentage(3)\r\n \r\n export default fonts = {\r\n     fontMontserrat,\r\n     fontSmall\r\n"
+                },
+                {
+                    "date": 1642431199629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { RFPercentage, RFValue } from \"react-native-responsive-fontsize\";\r\n \r\n const fontMontserrat = 'Montserrat-Bold'\r\n-const fontSmall = RFPercentage(3)\r\n+const fontSmall = RFPercentage(2)\r\n \r\n export default fonts = {\r\n     fontMontserrat,\r\n     fontSmall\r\n"
+                },
+                {
+                    "date": 1642431301934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { RFPercentage, RFValue } from \"react-native-responsive-fontsize\";\r\n \r\n const fontMontserrat = 'Montserrat-Bold'\r\n const fontSmall = RFPercentage(2)\r\n+const fontMedium = RFPercentage(2.5)\r\n \r\n export default fonts = {\r\n     fontMontserrat,\r\n     fontSmall\r\n"
+                },
+                {
+                    "date": 1642431348700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n \r\n const fontMontserrat = 'Montserrat-Bold'\r\n const fontSmall = RFPercentage(2)\r\n const fontMedium = RFPercentage(2.5)\r\n+const lightGreen = '#13B58C';\r\n \r\n export default fonts = {\r\n     fontMontserrat,\r\n-    fontSmall\r\n+    fontSmall,\r\n+    lightGreen\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642432006798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,24 @@\n import { RFPercentage, RFValue } from \"react-native-responsive-fontsize\";\r\n \r\n-const fontMontserrat = 'Montserrat-Bold'\r\n-const fontSmall = RFPercentage(2)\r\n-const fontMedium = RFPercentage(2.5)\r\n+const fontMontserrat = 'Montserrat-Regular'\r\n+const fontMontserratBold = 'Montserrat-Bold'\r\n+const fontMontserratBig = 'Montserrat-ExtraBold'\r\n+const fontSmall = RFPercentage(1.5)\r\n+const fontMedium = RFPercentage(1.6875)\r\n+const fontLarge = RFPercentage(1.875)\r\n+const fontBig = RFPercentage(2.25)\r\n const lightGreen = '#13B58C';\r\n+const green = '#33907C',\r\n \r\n export default fonts = {\r\n     fontMontserrat,\r\n     fontSmall,\r\n-    lightGreen\r\n+    fontMedium,\r\n+    fontLarge,\r\n+    fontBig,\r\n+    lightGreen,\r\n+    fontMontserratBold,\r\n+    fontMontserratBig,\r\n+    green,\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642432020020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,7 @@\n     fontBig,\r\n     lightGreen,\r\n     fontMontserratBold,\r\n     fontMontserratBig,\r\n-    green,\r\n+    green\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642432035579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const fontMedium = RFPercentage(1.6875)\r\n const fontLarge = RFPercentage(1.875)\r\n const fontBig = RFPercentage(2.25)\r\n const lightGreen = '#13B58C';\r\n-const green = '#33907C',\r\n+const green = '#33907C'\r\n \r\n export default fonts = {\r\n     fontMontserrat,\r\n     fontSmall,\r\n"
+                },
+                {
+                    "date": 1642435156056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n const fontLarge = RFPercentage(1.875)\r\n const fontBig = RFPercentage(2.25)\r\n const lightGreen = '#13B58C';\r\n const green = '#33907C'\r\n+const white=\"white\"\r\n \r\n export default fonts = {\r\n     fontMontserrat,\r\n     fontSmall,\r\n"
+                },
+                {
+                    "date": 1642435162489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,7 @@\n     fontBig,\r\n     lightGreen,\r\n     fontMontserratBold,\r\n     fontMontserratBig,\r\n-    green\r\n+    green,white\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642436398175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const fontMontserrat = 'Montserrat-Regular'\r\n const fontMontserratBold = 'Montserrat-Bold'\r\n const fontMontserratBig = 'Montserrat-ExtraBold'\r\n-const fontSmall = RFPercentage(1.5)\r\n+const fontSmall = RFPercentage(3)\r\n const fontMedium = RFPercentage(1.6875)\r\n const fontLarge = RFPercentage(1.875)\r\n const fontBig = RFPercentage(2.25)\r\n const lightGreen = '#13B58C';\r\n"
+                },
+                {
+                    "date": 1642436425189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n const fontMontserrat = 'Montserrat-Regular'\r\n const fontMontserratBold = 'Montserrat-Bold'\r\n const fontMontserratBig = 'Montserrat-ExtraBold'\r\n const fontSmall = RFPercentage(3)\r\n-const fontMedium = RFPercentage(1.6875)\r\n-const fontLarge = RFPercentage(1.875)\r\n-const fontBig = RFPercentage(2.25)\r\n+const fontMedium = RFPercentage(1.6875*2)\r\n+const fontLarge = RFPercentage(1.875*2)\r\n+const fontBig = RFPercentage(2.25*2)\r\n const lightGreen = '#13B58C';\r\n const green = '#33907C'\r\n const white=\"white\"\r\n \r\n"
+                },
+                {
+                    "date": 1642436488201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n \r\n const fontMontserrat = 'Montserrat-Regular'\r\n const fontMontserratBold = 'Montserrat-Bold'\r\n const fontMontserratBig = 'Montserrat-ExtraBold'\r\n-const fontSmall = RFPercentage(3)\r\n-const fontMedium = RFPercentage(1.6875*2)\r\n-const fontLarge = RFPercentage(1.875*2)\r\n-const fontBig = RFPercentage(2.25*2)\r\n+const fontSmall = RFPercentage(2)\r\n+const fontMedium = RFPercentage(2.25)\r\n+const fontLarge = RFPercentage(2.5)\r\n+const fontBig = RFPercentage(3)\r\n const lightGreen = '#13B58C';\r\n const green = '#33907C'\r\n const white=\"white\"\r\n \r\n"
+                },
+                {
+                    "date": 1642436551601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n \r\n const fontMontserrat = 'Montserrat-Regular'\r\n const fontMontserratBold = 'Montserrat-Bold'\r\n const fontMontserratBig = 'Montserrat-ExtraBold'\r\n-const fontSmall = RFPercentage(2)\r\n-const fontMedium = RFPercentage(2.25)\r\n-const fontLarge = RFPercentage(2.5)\r\n-const fontBig = RFPercentage(3)\r\n+const fontSmall = RFPercentage(2.5)\r\n+const fontMedium = RFPercentage(2.8125)\r\n+const fontLarge = RFPercentage(3.125)\r\n+const fontBig = RFPercentage(3.75)\r\n const lightGreen = '#13B58C';\r\n const green = '#33907C'\r\n const white=\"white\"\r\n \r\n"
+                },
+                {
+                    "date": 1642436594301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n \r\n const fontMontserrat = 'Montserrat-Regular'\r\n const fontMontserratBold = 'Montserrat-Bold'\r\n const fontMontserratBig = 'Montserrat-ExtraBold'\r\n-const fontSmall = RFPercentage(2.5)\r\n-const fontMedium = RFPercentage(2.8125)\r\n-const fontLarge = RFPercentage(3.125)\r\n-const fontBig = RFPercentage(3.75)\r\n+const fontSmall = RFPercentage(2.25)\r\n+const fontMedium = RFPercentage(2.53125)\r\n+const fontLarge = RFPercentage(2.8125)\r\n+const fontBig = RFPercentage(3.375)\r\n const lightGreen = '#13B58C';\r\n const green = '#33907C'\r\n const white=\"white\"\r\n \r\n"
+                }
+            ],
+            "date": 1642430891961,
+            "name": "Commit-0",
+            "content": "const fontMontserrat = 'Montserrat-Bold'\r\n\r\n\r\nexport default {\r\n    fontMontserrat\r\n}"
+        }
+    ]
+}
